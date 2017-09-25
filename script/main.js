@@ -19,6 +19,8 @@
       let newSubImg = document.createElement('img');
       newSubImg.classlist.add('thumb');
       newSubImg.src = "images/"+ objectIndex.images[index];
+      newsubImg.dataset.index = index;
+      newSubImg.addEventListener('click', popLightBox, false);
       subImages.appendChild(newSubImg);
     });
 
@@ -39,5 +41,12 @@
   theImages.forEach(function(image, index){
     image.addEventListener('click', changeElements, false);
   });
+
+  function popLightBox() {
+    debugger;
+    let lightbox = document.querySelector('.lightbox');
+    lightbox.style.display = block;
+
+  }
 
 })();
