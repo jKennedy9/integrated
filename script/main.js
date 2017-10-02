@@ -7,7 +7,6 @@
 
   // i want to change all the content on the page
   function changeElements() {
-    debugger;
     let subImages = document.querySelector('.subImagesContainer');
     let objectIndex = dynamicContent[this.id];
 
@@ -17,11 +16,15 @@
 
     objectIndex.images.forEach(function(image, index) {
       let newSubImg = document.createElement('img');
-      newSubImg.classlist.add('thumb');
+      console.log(newSubImg);
       newSubImg.src = "images/"+ objectIndex.images[index];
-      newsubImg.dataset.index = index;
+      newSubImg.classlist.add('thumb');
+      newSubImg.dataset.index = index;
       newSubImg.addEventListener('click', popLightBox, false);
       subImages.appendChild(newSubImg);
+
+
+
     });
 
     theSubhead.classList.remove(appliedClass);
