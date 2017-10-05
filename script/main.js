@@ -15,15 +15,13 @@
     }
 
     objectIndex.images.forEach(function(image, index) {
-      let newSubImg = document.createElement('img');
-      console.log(newSubImg);
+      var newSubImg = document.createElement('img');
       newSubImg.src = "images/"+ objectIndex.images[index];
-      newSubImg.classlist.add('thumb');
+      newSubImg.className += " thumb";
       newSubImg.dataset.index = index;
       newSubImg.addEventListener('click', popLightBox, false);
       subImages.appendChild(newSubImg);
-
-
+      newSubImg.addEventListener('click', function() {popLightBox(index, objectIndex); }, false);
 
     });
 
@@ -45,11 +43,24 @@
     image.addEventListener('click', changeElements, false);
   });
 
-  function popLightBox() {
+  function popLightBox(currentIndex, currentObject) {
     debugger;
+    window.scrollTo(0,0);
+    document.body.style.overflow = 'hidden';
     let lightbox = document.querySelector('.lightbox');
-    lightbox.style.display = block;
+    let lightboxImg =lightbox.querySelector('img');
+    let lightboxDesc = lightbox.querySelector('p');
+    let lightboxClose = document.querySelector('.close-lightbox');
+    lightbox.style.display = 'block';
+    lightboxImg.src = "images/"+ currentObject.images[currentIndex];
+    lightboxDesc.innerHTML = currentObject.imageDescription[currentIndex];
 
+    lightBoxClose.addEventListener('click', closeLightbox, false);
+
+  }
+
+  function closeLightboc(){
+    debugger;
   }
 
 })();
