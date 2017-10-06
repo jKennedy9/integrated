@@ -7,7 +7,6 @@
 
   // i want to change all the content on the page
   function changeElements() {
-    debugger;
     let subImages = document.querySelector('.subImagesContainer');
     let objectIndex = dynamicContent[this.id];
 
@@ -16,10 +15,13 @@
     }
 
     objectIndex.images.forEach(function(image, index) {
-      let newSubImg = document.createElement('img');
-      newSubImg.classlist.add('thumb');
+      var newSubImg = document.createElement('img');
       newSubImg.src = "images/"+ objectIndex.images[index];
+      newSubImg.className += " thumb";
+      newSubImg.dataset.index = index;
       subImages.appendChild(newSubImg);
+      newSubImg.addEventListener('click', function() {popLightBox(index, objectIndex); }, false);
+
     });
 
     theSubhead.classList.remove(appliedClass);
@@ -39,5 +41,27 @@
   theImages.forEach(function(image, index){
     image.addEventListener('click', changeElements, false);
   });
+
+  function popLightBox(currentIndex, currentObject) {
+    window.scrollTo(0,0);
+    document.body.style.overflow = 'hidden';
+    let lightbox = document.querySelector('.lightbox');
+    let lightboxImg =lightbox.querySelector('img');
+    let lightboxDesc = lightbox.querySelector('p');
+    let lightBoxClose = document.querySelector('.close-lightbox');
+    lightbox.style.display = 'block';
+    lightboxImg.src = "images/"+ currentObject.images[currentIndex];
+    lightboxDesc.innerHTML = currentObject.imageDescription[currentIndex];
+    lightBoxClose.addEventListener('click', closeLightbox, false);
+  }
+
+  function closeLightbox(){
+    let lightbox = document.querySelector('.lightbox');
+    lightbox.style.display = "none";
+    document.body.style.overflow = "scroll";
+
+
+
+  }
 
 })();

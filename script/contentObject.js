@@ -6,9 +6,23 @@ var dynamicContent = {
 
 			images : [
 				"spring_1.jpg",
-				"spring_2.jpg"
+				"spring_2.jpg",
+				"spring_3.jpg",
+				"spring_4.jpg",
+				"spring_5.jpg",
+				"spring_6.jpg"
+			],
+
+			imageDescription : [
+				"This is a bunch of butterflies",
+				"This is a ducky! or a chick, whatever",
+				"These are several types of flowers",
+				"This is the branch of a cherry blossom tree",
+				"These are some butterflies on a branch",
+				"This is a frolicking goat"
 			]
 		},
+
 
 		summer : {
 			text : "Summer is the warmest of the four temperate seasons, falling between spring and autumn. At the summer solstice, the days are longest and the nights are shortest, with day-length decreasing as the season progresses after the solstice. The date of the beginning of summer varies according to climate, tradition and culture, but when it is summer in the Northern Hemisphere it is winter in the Southern Hemisphere, and vice versa.",
@@ -17,7 +31,20 @@ var dynamicContent = {
 
 			images : [
 				"summer_1.jpg",
-				"summer_2.jpg"
+				"summer_2.jpg",
+				"summer_3.jpg",
+				"summer_4.jpg",
+				"summer_5.jpg",
+				"summer_6.jpg"
+			],
+
+			imageDescription : [
+				"This is a bunch of beach chairs",
+				"This is a tiny golden retriever",
+				"This is a flip flop, a coconut, and some sunglasses",
+				"This is a dog that is cooler than you",
+				"These are some people dancing or something on a beach",
+				"These are some pool toys"
 			]
 		},
 
@@ -28,7 +55,20 @@ var dynamicContent = {
 
 			images : [
 				"autumn_1.jpg",
-				"autumn_2.jpg"
+				"autumn_2.jpg",
+				"autumn_3.jpg",
+				"autumn_4.jpg",
+				"autumn_5.jpg",
+				"autumn_6.jpg"
+			],
+
+			imageDescription : [
+				"This is a path between some trees",
+				"This is an arrangement of seasonal plants",
+				"These are a bunch of leaves covering the ground",
+				"This is a bench in a park",
+				"This is a city street",
+				"This is a waterfall"
 			]
 		},
 
@@ -39,7 +79,20 @@ var dynamicContent = {
 
 			images : [
 				"winter_1.jpg",
-				"winter_2.jpg"
+				"winter_2.jpg",
+				"winter_3.jpg",
+				"winter_4.jpg",
+				"winter_5.jpg",
+				"winter_6.jpg"
+			],
+
+			imageDescription : [
+				"This sunlight coming through some trees",
+				"This is a snowman",
+				"These are some people walking through the snow",
+				"These are some footprints in the snow",
+				"This is a frozen lake and a mountian",
+				"These are some skiers"
 			]
 		}
 	};
